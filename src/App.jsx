@@ -45,13 +45,13 @@ const App = () => {
       <h1>Local Weather</h1>
       <section>
         {weatherForecasts.map((forecast) => (
-          <weatherForecasts
-            day={forecast.day}
-            img={forecast.img}
-            imgAlt={forecast.imgAlt}
-            conditions={forecast.conditions}
-            time={forecast.time}
-          />
+          <div className="weather">
+            <h3>{forecast.day}</h3>
+            <img src={forecast.img} alt={forecast.imgAlt} />
+            <p>
+              {forecast.conditions} - {forecast.time}
+            </p>
+          </div>
         ))}
       </section>
     </>
